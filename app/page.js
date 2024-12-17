@@ -47,10 +47,10 @@ export default function Home() {
                 mobile: true,
                 live: true
             });
-            wow.init(); // 啟動 WOW.js
+            wow.init();
 
         }
-    }, []); // 空的依賴數組，確保僅在組件加載時執行一次
+    }, []);
 
     return (
         <>
@@ -153,7 +153,6 @@ export default function Home() {
                             <h4 className={styles.info}>Step into the thrilling realm of Robotrix, a free RPG game by Sunjet. Engage in tactical combat, unravel secrets, and embark on epic quests in this immersive game world. With its rich storyline and strategic gameplay, Robotrix delivers a captivating gaming experience. Dive into Robotrix today and begin your extraordinary RPG adventure!</h4>
                             <Image className={styles.appIcn} src="/images/appIcon.png" alt="appIcon" width={402} height={59} />
                         </div>
-                        {/* <Image className={`${styles["gameIcn"]} wow slideInLeft`} src="/images/row3Icn.png" alt="" width={435} height={602} layout="intrinsic" data-wow-duration="2s" data-wow-delay="0.8s" /> */}
                         <Lottie
                             animationData={Robot}
                             className={`${styles["gameIcn"]} wow slideInLeft`}
