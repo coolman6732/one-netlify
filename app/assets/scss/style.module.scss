@@ -1,0 +1,251 @@
+@import "grids";
+@import url('https://static.zeoseven.com/zsft/52/main/result.css');
+$font-yahei: Arial, Helvetica, \5FAE\8EDF\6B63\9ED1\9AD4, sans-serif;
+$font-ming: Arial, Helvetica, \7EC6\660E\4F53, sans-serif;
+$img-path: "/images";
+
+.inner {
+    width: span(14 of 14);
+    max-width: 1580px;
+    margin: 0 auto;
+    lost-utility: clearfix;
+    padding: 0 span(0.3);
+    position: relative;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    .inner {
+        display: flex;
+    }
+
+    .logo {
+        color: #000;
+        font-family: Lingui-ProRegular;
+        font-size: 18px;
+    }
+
+    &.fixNav {
+        position: fixed;
+        height: 70px;
+        width: 100%;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+    }
+
+    ul {
+        margin-left: span(1);
+
+        li {
+            lost-column: 1/4 4 50px;
+        }
+
+        a {
+            font-family: Lingui-ProRegular;
+            color: #fff;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+            transition: all 300ms ease-in-out;
+            white-space: nowrap;
+
+            &.active,
+            &:hover {
+                color: var(--red--color);
+                text-shadow: none;
+            }
+        }
+    }
+}
+
+.banner {
+    min-height: 870px;
+    padding: 3% 0;
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+
+    .banIcn {
+        width: span(8 of 14) !important;
+
+    }
+
+    .appIcn {
+        margin: 20px 0 0 span(0.2);
+    }
+
+    h2 {
+        color: var(--red--color);
+        text-shadow: 0px 10px 16px rgba(0, 0, 0, 0.24);
+        font-size: 130px;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+
+        p {
+            padding-left: 18px;
+            font-size: 23px;
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+dl {
+
+    h3.title {
+        line-height: 1.3em;
+        font-size: 70px;
+
+    }
+
+    p.info {
+        font-family: "jf-openhuninn-2.0";
+        font-weight: normal;
+        font-size: 23px;
+        line-height: 1.5em;
+        color: var(--red--color);
+    }
+
+    h4.info {
+        font-weight: normal;
+        color: var(--font--color);
+        line-height: 1.8em;
+        margin: 22px 0 38px 0;
+        font-size: 18px;
+    }
+
+    dd {
+        .inner {
+            display: flex;
+            align-items: center;
+
+        }
+
+        &.row1 {
+            .left {
+                width: span(6 of 14);
+                position: relative;
+
+                .people {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .gameIcn {
+                    position: absolute;
+                    right: 0;
+                    bottom: 12%;
+
+                }
+            }
+
+            .right {
+                width: span(7 of 14);
+                margin-left: span(1);
+            }
+        }
+
+        &.row2 {
+            background: url(#{$img-path}/row2Bg.png) no-repeat left center /80% 80%;
+            padding: 0 0 5% 0;
+            margin-top: 4%;
+
+            .inner {
+                justify-content: space-between;
+            }
+
+            .left {
+                width: span(7 of 14);
+            }
+
+            .gameIcn {
+                margin-left: auto;
+                width: 530px
+            }
+
+            h3.title,
+            h4.info {
+                color: #fff;
+            }
+        }
+
+        &.row3 {
+            .inner {
+                flex-direction: row-reverse;
+            }
+
+            .left {
+                width: span(10 of 14);
+                margin-left: span(1);
+            }
+
+            .gameIcn {
+                width: 460px;
+            }
+        }
+
+        &.row4 {
+            padding: 5% 0;
+            background: url(#{$img-path}/row4Bg.png) no-repeat right center /45% 100%;
+
+            .left {
+                width: span(7.5 of 14);
+            }
+
+            .gameIcn {
+                margin-left: span(0.5);
+            }
+        }
+    }
+}
+
+footer {
+    &.footer {
+        background: #1b262d;
+        color: #fff;
+        padding: 5% 0;
+    }
+
+    .inner {
+        display: flex;
+    }
+
+    .column {
+        width: span(3.5 of 14);
+        margin-right: span(0.8);
+
+        h2 {
+            font-family: baloo;
+            position: relative;
+            padding-bottom: 16px;
+            margin-bottom: 28px;
+
+            &::before {
+                content: '';
+                height: 2px;
+                width: 20px;
+                background: #fff;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        ul {
+            font-family: "jf-openhuninn-2.0";
+
+            li {
+                line-height: 1.6em;
+            }
+        }
+    }
+
+
+}
