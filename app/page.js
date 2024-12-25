@@ -126,8 +126,8 @@ export default function Home() {
                 <dd id='about' className={`${styles.row1} scroll-target`}>
                     <div className={styles.inner}>
                         <div className={styles.left}>
-                            <Image className={`${styles.people} wow slideInLeft`} src="/images/row1People.png" alt="" width={494} height={741} layout="intrinsic" data-wow-duration="2s" data-wow-delay="0.5s" />
-                            <Image className={`${styles["gameIcn"]} wow slideInDown`} src="/images/rowGameIcn.png" alt="" width={442} height={557} layout="intrinsic" data-wow-duration="2s" data-wow-delay="0.8s" />
+                            <Image className={`${styles.people} wow slideInLeft`} src="/images/row1People.png" alt="" width={494} height={741} data-wow-duration="2s" data-wow-delay="0.5s" />
+                            <Image className={`${styles["gameIcn"]} wow slideInDown`} src="/images/rowGameIcn.png" alt="" width={442} height={557} data-wow-duration="2s" data-wow-delay="0.8s" />
                         </div>
                         <div className={styles.right}>
                             <h3 className={`${baloo.className} ${styles.title}`}>About Inspirain</h3>
@@ -186,7 +186,7 @@ export default function Home() {
                             </h4>
                             <Image className={styles.appIcn} src="/images/appIcon.png" alt="appIcon" width={402} height={59} />
                         </div>
-                        <Image className={`${styles["gameIcn"]} wow slideInRight`} src="/images/row4Icn.png" alt="" width={538} height={508} layout="intrinsic" data-wow-duration="2s" data-wow-delay="0.8s" />
+                        <Image className={`${styles["gameIcn"]} wow slideInRight`} src="/images/row4Icn.png" alt="" width={538} height={508} data-wow-duration="2s" data-wow-delay="0.8s" />
                     </div>
                 </dd>
             </dl>

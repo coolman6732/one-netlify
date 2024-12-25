@@ -30,7 +30,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.column}>
                         <h2>Find Us On</h2>
-                        <Image className={styles.gameIcn} src="/images/footerAppIcn.png" alt="" width={197} height={133} layout="intrinsic" data-wow-duration="2s" data-wow-delay="0.8s" />
+                        <Image className={styles.gameIcn} src="/images/footerAppIcn.png" alt="" width={197} height={133} data-wow-duration="2s" data-wow-delay="0.8s" />
                     </div>
                 </div>
             </footer>
