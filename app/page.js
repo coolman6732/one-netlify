@@ -26,32 +26,49 @@ const baloo = Baloo_2({
     style: ['normal'],
 });
 
+const loadScript = (src, onLoad) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = onLoad;
+    document.body.appendChild(script);
+};
+
 export default function Home() {
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            var slider = new MasterSlider();
-            slider.setup('masterslider', {
-                width: 800,
-                height: 768,
-                fullwidth: true,
-                autoHeight: true,
-                mouse: true,
-                view: "basic"
-            });
+            // 首先加载 jQuery
+            loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', () => {
+                console.log('jQuery loaded successfully');
 
-            // 初始化 WOW.js
-            const wow = new WOW({
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: 0,
-                mobile: true,
-                live: true
-            });
-            wow.init();
+                loadScript('/js/animatescroll.js', () => {
+                    console.log('animatescroll.js loaded');
+                });
 
+                loadScript('/js/masterslider.js', () => {
+                    const slider = new MasterSlider();
+                    slider.setup('masterslider', {
+                        width: 800,
+                        height: 768,
+                        fullwidth: true,
+                        autoHeight: true,
+                        mouse: true,
+                        view: 'basic',
+                    });
+
+                    loadScript('/js/wow.min.js', () => {
+                        const wow = new WOW({
+                            boxClass: 'wow',
+                            animateClass: 'animated',
+                            offset: 0,
+                            mobile: true,
+                            live: true,
+                        });
+                        wow.init();
+                    });
+                });
+            });
         }
     }, []);
-
     return (
         <>
             <div className={styles.banner}>

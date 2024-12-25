@@ -6,45 +6,35 @@ export default function Header() {
     const [activeLink, setActiveLink] = useState('');
 
     useEffect(() => {
-        // 加载 animatescroll.js
-        const script = document.createElement('script');
-        script.src = '/js/animatescroll.js'; // 确保路径正确
-        document.body.appendChild(script);
-
-        // 处理滚动事件
         const handleScroll = () => {
-            if (window.scrollY > 100) {  // 当滚动超过 100px 时
+            if (window.scrollY > 100) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
             }
 
-            // 获取所有目标部分（使用 dd 标签）
-            const sections = document.querySelectorAll('dd.scroll-target'); // 修改为 dd 元素
+            const sections = document.querySelectorAll('dd.scroll-target');
             sections.forEach((section) => {
                 const rect = section.getBoundingClientRect();
 
-                // 判断部分是否在视口中
                 if (rect.top <= 0 && rect.bottom >= 0) {
-                    setActiveLink(section.id); // 更新当前活动链接
+                    setActiveLink(section.id);
                 }
             });
         };
 
-        // 添加滚动事件监听器
         window.addEventListener('scroll', handleScroll);
 
-        // 清理时移除监听
         return () => {
             document.body.removeChild(script);
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    // 点击链接时，滚动到目标部分
+
     const handleClick = (sectionId, event) => {
-        event.preventDefault();  // 阻止默认链接行为
-        setActiveLink(sectionId);  // 设置当前活动链接
+        event.preventDefault();
+        setActiveLink(sectionId);
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -2,25 +2,6 @@
 
 import Image from "next/image";
 import styles from "../assets/css/style.module.css";
-import { Yeseva_One, Varela_Round, Baloo_2 } from "next/font/google";
-
-const yesevaOne = Yeseva_One({
-    variable: "--font-yeseva-sans",
-    subsets: ['latin'],
-    weight: '400',
-});
-
-const varelaRound = Varela_Round({
-    variable: '--font-varela-round',
-    subsets: ['latin'],
-    weight: '400',
-});
-
-const baloo = Baloo_2({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    style: ['normal'],
-});
 
 
 export default function Footer() {
