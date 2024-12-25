@@ -36,19 +36,15 @@ const loadScript = (src, onLoad) => {
 export default function Home() {
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            // 首先加载 jQuery
             loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js', () => {
-                console.log('jQuery loaded successfully');
 
-                loadScript('/js/animatescroll.js', () => {
-                    console.log('animatescroll.js loaded');
-                });
+                loadScript('/js/animatescroll.js');
 
                 loadScript('/js/masterslider.js', () => {
                     const slider = new MasterSlider();
                     slider.setup('masterslider', {
-                        width: 800,
-                        height: 768,
+                        width: 1680,
+                        height: 700,
                         fullwidth: true,
                         autoHeight: true,
                         mouse: true,
